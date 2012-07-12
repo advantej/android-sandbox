@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestSherlock</string>
+    <string name="menu_pref_title">Title</string>
+    <string name="menu_pref_condensed_title">Title</string>
+    <string name="menu_refresh_title">Refresh</string>
+    <string name="menu_refresh_condensed_title">Refresh</string>
+    <string name="menu_compose_title">Compose</string>
+    <string name="menu_compose_condensed_title">Compose</string>
+    <string name="menu_timeline_title">Timeline</string>
+    <string name="menu_timeline_condensed_title">Timeline</string>
+</resources>
