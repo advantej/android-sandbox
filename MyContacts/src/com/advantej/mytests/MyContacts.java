@@ -46,7 +46,7 @@ public class MyContacts extends Activity
 
             //String count = String.valueOf(c.getCount());
 
-            String tag = "PSPL";
+            String tag = "Foo";
 
             int count = 0;
             //c.moveToFirst();
