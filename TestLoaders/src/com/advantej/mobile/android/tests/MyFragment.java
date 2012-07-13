@@ -24,6 +24,9 @@ public class MyFragment extends Fragment implements LoaderManager.LoaderCallback
     private LoaderManager mLoaderManager;
     private static final int MY_LOADER = 1;
 
+    // Handler to sync onLoadFinished/onLoaderReset with the UI thread
+    private Handler mHandler = new Handler();
+
     private TextView mTxtSomeTxt;
     private Button mRefresh;
 
@@ -71,16 +74,30 @@ public class MyFragment extends Fragment implements LoaderManager.LoaderCallback
     @Override
     public void onLoadFinished(Loader<Object> loader, Object data) {
         Log.d(TAG, "onLoadFinished, myTid : " + android.os.Process.myTid());
-        if(mTxtSomeTxt != null){
-            mTxtSomeTxt.setText((String)data);
-        }
+
+        final String val = (String)data;
+
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                if(mTxtSomeTxt != null){
+                    mTxtSomeTxt.setText(val);
+                }
+            }
+        });
     }
 
     @Override
     public void onLoaderReset(Loader<Object> objectLoader) {
         Log.d(TAG, "onLoaderReset, myTid : " + android.os.Process.myTid());
-        if(mTxtSomeTxt != null){
-            mTxtSomeTxt.setText("");
-        }
+
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                if(mTxtSomeTxt != null){
+                    mTxtSomeTxt.setText("");
+                }
+            }
+        });
     }
 }
