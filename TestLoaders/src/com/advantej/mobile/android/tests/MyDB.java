@@ -25,7 +25,7 @@ public class MyDB {
 
 
     /** The authority for the contacts provider */
-    public static final String AUTHORITY = "com.example";
+    public static final String AUTHORITY = "com.advantej.mobile.android";
 
     /** A content:// style uri to the authority for this table */
     // Uri is used just to use for associating with a cursor so that we can use notifyChange.

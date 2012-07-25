@@ -14,15 +14,34 @@ import android.util.Log;
 public class MyLoader extends AsyncTaskLoader<Cursor> {
     private static final String TAG = "MyLoader";
 
-    //TODO Constructor to accept tablename and query parameters
     private Cursor mCursor;
     private final ForceLoadContentObserver mObserver;
     private MyDB myDB;
 
-    public MyLoader(Context context) {
+    private String mTableName;
+    private String[] mTableColumns;
+    private String mSelection;
+    private String[] mSelectionArgs;
+    private String mGroupBy;
+    private String mHaving;
+    private String mOrderBy;
+    private String mLimit;
+
+    public MyLoader(Context context, String table, String[] columns,
+                    String selection, String[] selectionArgs, String groupBy, String having,
+                    String orderBy, String limit){
         super(context);
         mObserver = new ForceLoadContentObserver();
         myDB = MyDB.getDataBaseManager(getContext()); // Is this safe ? or getApplicationContext is needed ?
+
+        mTableName = table;
+        mTableColumns = columns;
+        mSelection = selection;
+        mSelectionArgs = selectionArgs;
+        mGroupBy = groupBy;
+        mHaving = having;
+        mOrderBy = orderBy;
+        mLimit = limit;
     }
 
 
@@ -31,9 +50,10 @@ public class MyLoader extends AsyncTaskLoader<Cursor> {
     public Cursor loadInBackground() {
         Log.d(TAG, "loadInBackground, myTid : " + android.os.Process.myTid());
         Log.d(TAG, "loadInBackground, ObjectId : " + System.identityHashCode(MyLoader.this));
-        //Do some fancy stuff and return an Object as the result !
+
         // After return, onLoadFinished() of MyFragment should be called.
-        Cursor cursor = myDB.query(MyDB.T_TABLE, null, null, null, null, null, null, null);
+        Cursor cursor = myDB.query(mTableName, mTableColumns, mSelection, mSelectionArgs, mGroupBy,
+                                   mHaving, mOrderBy, mLimit);
         if(cursor != null){
             cursor.getCount();
             cursor.registerContentObserver(mObserver);

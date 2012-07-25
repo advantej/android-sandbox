@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import com.example.R;
+import com.advantej.mobile.android.R;
 
 /**
  * Created by IntelliJ IDEA.
@@ -97,7 +97,7 @@ public class MyFragment extends Fragment implements LoaderManager.LoaderCallback
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
         Log.d(TAG, "onCreateLoader, myTid : " + android.os.Process.myTid());
-        return new MyLoader(getActivity().getApplicationContext());
+        return new MyLoader(getActivity().getApplicationContext(), MyDB.T_TABLE, null, null, null, null, null, null, null);
     }
 
     @Override
