@@ -2,5 +2,7 @@
 <resources>
     <string name="app_name">TestLoaders</string>
     <string name="some_text">Foobar</string>
-    <string name="btn_refresh">Refresh</string>
+    <string name="some_text2">Foobar2</string>
+    <string name="btn_refresh_table1">Modify T1</string>
+    <string name="btn_refresh_table2">Modify T2</string>
 </resources>
