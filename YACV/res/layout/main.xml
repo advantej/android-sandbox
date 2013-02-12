@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <com.advantej.mobile.android.tests.YACV.CustomView xmlns:app="http://schemas.android.com/apk/res/com.advantej.mobile.android.tests.YACV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:orientation="horizontal_top_down"
+        android:id="@+id/yacv2"
+        app:handle="@+id/foo_handle"
+        app:content="@+id/foo_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@id/foo_handle"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_example" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@id/foo_content"
+            android:background="#FF00FFFF"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="@string/content_text" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="@string/content_text" />
+        </LinearLayout>
+
+
+    </com.advantej.mobile.android.tests.YACV.CustomView>
+
+    <com.advantej.mobile.android.tests.YACV.CustomView xmlns:app="http://schemas.android.com/apk/res/com.advantej.mobile.android.tests.YACV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:orientation="horizontal_left_right"
+        android:id="@+id/yacv"
+        app:handle="@+id/foo_handle"
+        app:content="@+id/foo_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@id/foo_handle"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_example" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@id/foo_content"
+            android:background="#FF00FFFF"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="@string/content_text" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="@string/content_text" />
+        </LinearLayout>
+
+
+    </com.advantej.mobile.android.tests.YACV.CustomView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/button_toggle"
+        android:text="Toggle" />
+
+</RelativeLayout>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyActivity</string>
+    <string name="content_text">This is the content text</string>
+    <string name="hello">Hello World, MyActivity</string>
+    <string name="longstring">This is a really long string just to check it goes behind the handle</string>
+</resources>
