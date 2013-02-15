@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <com.advantej.mobile.android.tests.YACV.AnotherCustomView
+        xmlns:app="http://schemas.android.com/apk/res/com.advantej.mobile.android.tests.YACV"
+        android:id="@+id/yaacv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:left_view_padding="40dp"
+        app:right_view_padding="40dp"
+        app:left_view="@+id/myLeft"
+        app:main_view="@+id/myMain"
+        app:right_view="@+id/myRight">
+
+        <LinearLayout
+            android:id="@id/myLeft"
+            android:background="#FFFF0000"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/left_view" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@id/myMain"
+            android:background="#FF00FF00"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/button_left"
+                android:text="Left" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/button_right"
+                android:text="Right" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/myRight"
+            android:background="#FF0000FF"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/right_view" />
+
+        </LinearLayout>
+    </com.advantej.mobile.android.tests.YACV.AnotherCustomView>
+
+
+</RelativeLayout>
+

@@ -10,4 +10,12 @@
             <enum name="horizontal_bottom_up" value="3"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="AnotherCustomView">
+        <attr name="left_view" format="reference" />
+        <attr name="main_view" format="reference" />
+        <attr name="right_view" format="reference" />
+        <attr name="left_view_padding" format="dimension" />
+        <attr name="right_view_padding" format="dimension" />
+    </declare-styleable>
 </resources>
