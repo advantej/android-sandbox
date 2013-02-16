@@ -9,8 +9,8 @@
         android:id="@+id/yaacv"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        app:left_view_padding="40dp"
-        app:right_view_padding="40dp"
+        app:left_view_padding="60dp"
+        app:right_view_padding="60dp"
         app:left_view="@+id/myLeft"
         app:main_view="@+id/myMain"
         app:right_view="@+id/myRight">
